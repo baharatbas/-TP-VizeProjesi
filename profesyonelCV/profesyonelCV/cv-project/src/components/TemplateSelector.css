@@ -1,0 +1,115 @@
+.template-selector {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: calc(100vh - 80px);
+}
+
+.template-selector-header {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.template-selector-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.template-selector-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.templates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.template-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid #e5e7eb;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.template-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
+}
+
+.template-card.selected {
+  border-color: #667eea;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+  transform: translateY(-5px);
+}
+
+.template-preview-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  transition: all 0.3s ease;
+}
+
+.template-card:hover .template-preview-icon {
+  transform: scale(1.1);
+}
+
+.template-emoji {
+  font-size: 40px;
+}
+
+.template-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.template-description {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.selected-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #667eea;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 768px) {
+  .template-selector-header h2 {
+    font-size: 2rem;
+  }
+
+  .templates-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
